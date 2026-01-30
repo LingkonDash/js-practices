@@ -157,3 +157,204 @@ let myObject = {
 for(pro in myObject) {
   console.log(`Key: ${pro} | type: ${typeof myObject[pro]}`);
 }
+
+//Date: 30/02/2026 basics
+/******************************Object_practice*******************************/
+//LEVEL_ONE.
+//---------------------------------task_one----------------------------------\\
+/*
+Read from an object.
+Create an object called person with:
+
+* name
+* age
+* city
+
+👉 Print a sentence like:
+My name is ___ , I am ___ years old and I live in ___. 
+*/
+
+const person = {
+  name: 'Lingkon',
+  age: 25,
+  city: 'Sreemangal'
+}
+console.log(`My name is ${person.name}, I am ${person.age} years old and I live in ${person.city}.`);
+
+//---------------------------------task_two----------------------------------\\
+/*
+Add a new property.
+You have an object with:
+
+* productName
+* price
+
+👉 Add a new property called 'inStock'.
+👉 Then print the whole object.
+
+Focus: adding properties dynamically.
+*/
+
+const product = {
+  productName: 'Laptop',
+  price: 50000
+}
+product.inStock = true;
+
+console.log(product);
+
+//---------------------------------task_three----------------------------------\\
+/*
+Update a property.
+Create an object with:
+
+* username
+* isLoggedIn (false)
+
+👉 Change isLoggedIn to true.
+👉 Print only that value.
+
+Focus: updating object values.
+*/
+
+const user = {
+  userName: 'Lingkon',
+  isLoggedIn: false
+}
+user.isLoggedIn = true;
+console.log(user.isLoggedIn);
+
+//LEVEL_TWO.
+//---------------------------------task_one----------------------------------\\
+/*
+Check property existence.
+Create an object with:
+
+* title
+* author
+
+👉 Check if the property pages exists
+👉 Print:
+
+"Pages available" or
+"Pages not available"
+
+Focus: undefined check.
+*/
+
+const book = {
+  title: 'War and Peace',
+  author: 'Leo Tolstoy',
+}
+book.pages === undefined ? console.log('Pages not available') : console.log('Pages available');
+
+//---------------------------------task_two----------------------------------\\
+/*
+Object decision logic
+Create a product object with:
+
+* name
+* price
+* inStock
+
+👉 If the product is in stock and price is greater than 0
+→ print "Product can be sold"
+Else → "Product cannot be sold"
+
+Focus: logical conditions + object values
+*/
+const product2 = {
+  name: 'Mobile',
+  price: 15000,
+  inStock: true
+}
+
+product2.inStock && product2.price > 0 ? console.log('Product can be sold') : console.log('Product cannot be sold')
+
+//---------------------------------task_three----------------------------------\\
+/*
+Count object properties.
+Create an object with at least 4 properties
+
+👉 Print how many properties the object has
+(Not manually counting — use logic)
+
+Focus: object structure awareness.
+*/
+const obj = {
+  property: 1,
+  property2: 2,
+  property3: 3,
+  property4: 4
+}
+console.log(Object.keys(obj).length);
+
+//LEVEL_THREE 
+//---------------------------------task_one----------------------------------\\
+/*
+Loop through object
+Create an object with:
+
+name
+age
+country
+
+👉 Loop through the object
+👉 Print each key and value like:
+key : value
+
+Focus: object iteration
+*/
+
+const user2 = {
+  name: 'Nayan',
+  age: 18,
+  country: 'Bangladesh'
+}
+for(let prop in user2) {
+  console.log(`${prop} : ${user2[prop]}`);
+}
+
+//---------------------------------task_two----------------------------------\\
+/*
+Find a specific value.
+Create an object with multiple properties
+One of them should have value "admin"
+
+👉 Loop through the object
+👉 If any value is "admin", print "Admin found"
+
+Focus: searching inside objects
+*/
+
+const user3 = {
+  name: 'Nayan',
+  age: 18,
+  isStudent: true,
+  country: 'Bangladesh',
+  roll: 'admin'
+}
+
+for(let prop in user3) {
+  if(user3[prop] === 'admin') { console.log('Admin found') }
+}
+
+//---------------------------------task_two----------------------------------\\
+/*
+Data validation
+Create a user object with:
+
+  * name
+  * age (wrong type intentionally)
+
+👉 Check if age is a number
+👉 If not, print "Invalid age type"
+Focus: type safety thinking.
+*/
+const user4 = {
+  name: 'Lingkon',
+  age: "twenty five"
+}
+if(isNaN(user4.age)){
+  console.log('Invalid age type');
+}
