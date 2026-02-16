@@ -6,9 +6,9 @@ const evenCheck = x => Number.isInteger(x) ? x % 2 === 0 ? `The number ${x} is e
 
 // Task 2:
 
-const vowelCheck = str => { 
-  if(typeof str !== 'string' || str.trim().includes(' ')) return "Error: Please provide a single string" ;
-  const vowel = 'aeiou'; 
+const vowelCheck = str => {
+  if (typeof str !== 'string' || str.trim().includes(' ')) return "Error: Please provide a single string";
+  const vowel = 'aeiou';
   const x = str.trim().toLowerCase().split('').filter(x => vowel.includes(x)).length;
   return `Here ${x} is the number of vowels found`
 }
@@ -18,12 +18,12 @@ const vowelCheck = str => {
 //Task 3:
 
 const duplicateCheck = arr => {
-  if(!Array.isArray(arr)) {
+  if (!Array.isArray(arr)) {
     return 'Error: Input must be an Array'
   }
   let newArr = []
-  for(const elem of arr) {
-    if(newArr.includes(elem)) {
+  for (const elem of arr) {
+    if (newArr.includes(elem)) {
       continue;
     }
     newArr.push(elem)
@@ -88,26 +88,26 @@ const studentMarks = {
 }
 
 for (const sub in studentMarks) {
-  if (studentMarks[sub] >= 0 && studentMarks[sub] < 33 ) studentMarks[sub] = 'F';
+  if (studentMarks[sub] >= 0 && studentMarks[sub] < 33) studentMarks[sub] = 'F';
 
-  else if (studentMarks[sub] >= 33 && studentMarks[sub] <= 39 ) studentMarks[sub] = 'D';
+  else if (studentMarks[sub] >= 33 && studentMarks[sub] <= 39) studentMarks[sub] = 'D';
 
-  else if (studentMarks[sub] >= 40 && studentMarks[sub] <= 49 ) studentMarks[sub] = 'C';
-  
-  else if (studentMarks[sub] >= 50 && studentMarks[sub] <= 59 ) studentMarks[sub] = 'B';
+  else if (studentMarks[sub] >= 40 && studentMarks[sub] <= 49) studentMarks[sub] = 'C';
 
-  else if (studentMarks[sub] >= 60 && studentMarks[sub] <= 69 ) studentMarks[sub] = 'A-';
+  else if (studentMarks[sub] >= 50 && studentMarks[sub] <= 59) studentMarks[sub] = 'B';
 
-  else if (studentMarks[sub] >= 70 && studentMarks[sub] <= 79 ) studentMarks[sub] = 'A';
+  else if (studentMarks[sub] >= 60 && studentMarks[sub] <= 69) studentMarks[sub] = 'A-';
 
-  else if (studentMarks[sub] >= 80 && studentMarks[sub] <= 100 ) studentMarks[sub] = 'A+';
+  else if (studentMarks[sub] >= 70 && studentMarks[sub] <= 79) studentMarks[sub] = 'A';
+
+  else if (studentMarks[sub] >= 80 && studentMarks[sub] <= 100) studentMarks[sub] = 'A+';
 }
 
 // console.log(studentMarks);
 
 //Task 8:
 const pascleCase = str => {
-  if(typeof str !== 'string' || str.trim().split(' ').length === 1) return "Error: Please provide a valid sentence."
+  if (typeof str !== 'string' || str.trim().split(' ').length === 1) return "Error: Please provide a valid sentence."
 
   return str.trim().split(' ').filter(x => x).map(x => x[0].toUpperCase() + x.slice(1)).join(' ');
 }
@@ -116,66 +116,66 @@ const pascleCase = str => {
 
 //task: 9
 const morseCode = {
-    // Letters
-    A: ".-",
-    B: "-...",
-    C: "-.-.",
-    D: "-..",
-    E: ".",
-    F: "..-.",
-    G: "--.",
-    H: "....",
-    I: "..",
-    J: ".---",
-    K: "-.-",
-    L: ".-..",
-    M: "--",
-    N: "-.",
-    O: "---",
-    P: ".--.",
-    Q: "--.-",
-    R: ".-.",
-    S: "...",
-    T: "-",
-    U: "..-",
-    V: "...-",
-    W: ".--",
-    X: "-..-",
-    Y: "-.--",
-    Z: "--..",
-    
-    // Numbers
-    0: "-----",
-    1: ".----",
-    2: "..---",
-    3: "...--",
-    4: "....-",
-    5: ".....",
-    6: "-....",
-    7: "--...",
-    8: "---..",
-    9: "----.",
-    
-    // Punctuation
-    ".": ".-.-.-",
-    ",": "--..--",
-    "?": "..--..",
-    "'": ".----.",
-    "!": "-.-.--",
-    "/": "-..-.",
-    "(": "-.--.",
-    ")": "-.--.-",
-    "&": ".-...",
-    ":": "---...",
-    ";": "-.-.-.",
-    "=": "-...-",
-    "+": ".-.-.",
-    "-": "-....-",
-    "_": "..--.-",
-    "\"": ".-..-.",
-    "$": "...-..-",
-    "@": ".--.-.",
-    " ": "/"
+  // Letters
+  A: ".-",
+  B: "-...",
+  C: "-.-.",
+  D: "-..",
+  E: ".",
+  F: "..-.",
+  G: "--.",
+  H: "....",
+  I: "..",
+  J: ".---",
+  K: "-.-",
+  L: ".-..",
+  M: "--",
+  N: "-.",
+  O: "---",
+  P: ".--.",
+  Q: "--.-",
+  R: ".-.",
+  S: "...",
+  T: "-",
+  U: "..-",
+  V: "...-",
+  W: ".--",
+  X: "-..-",
+  Y: "-.--",
+  Z: "--..",
+
+  // Numbers
+  0: "-----",
+  1: ".----",
+  2: "..---",
+  3: "...--",
+  4: "....-",
+  5: ".....",
+  6: "-....",
+  7: "--...",
+  8: "---..",
+  9: "----.",
+
+  // Punctuation
+  ".": ".-.-.-",
+  ",": "--..--",
+  "?": "..--..",
+  "'": ".----.",
+  "!": "-.-.--",
+  "/": "-..-.",
+  "(": "-.--.",
+  ")": "-.--.-",
+  "&": ".-...",
+  ":": "---...",
+  ";": "-.-.-.",
+  "=": "-...-",
+  "+": ".-.-.",
+  "-": "-....-",
+  "_": "..--.-",
+  "\"": ".-..-.",
+  "$": "...-..-",
+  "@": ".--.-.",
+  " ": "/"
 };
 
 const morseToText = {
@@ -243,9 +243,9 @@ const morseToText = {
 
 const morseDecode = (str, boolean) => {
 
-  if(typeof str !== 'string') return "Error: Please Provide a string"
+  if (typeof str !== 'string') return "Error: Please Provide a string"
 
-  if(boolean) return str.trim().toUpperCase().split('').map(x => x = morseCode[x]).join(" ");
+  if (boolean) return str.trim().toUpperCase().split('').map(x => x = morseCode[x]).join(" ");
 
   return str.trim().split(' ').map(x => morseToText[x] ? x = morseToText[x] : '#').join("")
 }
@@ -319,13 +319,12 @@ const convertions = {
 };
 
 function unitConverter(unit, type, targetType) {
-  
-  if(!Number.isFinite(unit)) return 'Error: Unit value is invalid.'
 
-  if(!convertions[`${type}-${targetType}`]) return `Conversion type is invalid or not found, please select from these { millimeter (mm), centimeter (cm), meter (m), kilometer (km), mile (mile), foot (ft), inch (in) } `
+  if (!Number.isFinite(unit)) return 'Error: Unit value is invalid.'
+
+  if (!convertions[`${type}-${targetType}`]) return `Conversion type is invalid or not found, please select from these { millimeter (mm), centimeter (cm), meter (m), kilometer (km), mile (mile), foot (ft), inch (in) } `
 
   return convertions[`${type}-${targetType}`](unit)
 }
 
 // console.log(unitConverter(20,'mile','cm'));
-
